@@ -1,8 +1,6 @@
 package br.edu.iftm.tspi.service;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import br.edu.iftm.tspi.dao.ContaDao;
@@ -30,7 +28,7 @@ public class ProcessaLinhasConta {
             } else if (opcao.equals("1")) {
                 processaCabecalho(linha);
             } else {
-                throw new Exception("Desconheço essa opção de processar a linha: "+opcao);
+                throw new IllegalArgumentException("Desconheço essa opção de processar a linha: "+opcao);
             }
         }
         contaDao.salvarLote(lote);
@@ -41,7 +39,7 @@ public class ProcessaLinhasConta {
         Integer loteBanco = contaDao.getUltimoLote();
         Integer loteEsperado = loteBanco + 1;
         if (!lote.equals(loteEsperado)) {
-            throw new Exception("Lote recebido: "+lote+ 
+            throw new IllegalArgumentException("Lote recebido: "+lote+ 
                                 "diferente do lote esperado:"+loteEsperado);
         }
         this.lote = lote;

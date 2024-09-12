@@ -29,7 +29,7 @@ public class ProcessaLinhasCliente {
             } else if (opcao.equals("1")) {
                 processaCabecalho(linha);
             } else {
-                throw new Exception("Desconheço essa opção de processar a linha: "+opcao);
+                throw new IllegalArgumentException("Desconheço essa opção de processar a linha: "+opcao);
             }
         }
         clienteDao.salvarLote(lote);
@@ -40,7 +40,7 @@ public class ProcessaLinhasCliente {
         Integer loteBanco = clienteDao.getUltimoLote();
         Integer loteEsperado = loteBanco + 1;
         if (!lote.equals(loteEsperado)) {
-            throw new Exception("Lote recebido: "+lote+ 
+            throw new IllegalArgumentException("Lote recebido: "+lote+ 
                                 "diferente do lote esperado:"+loteEsperado);
         }
         this.lote = lote;
