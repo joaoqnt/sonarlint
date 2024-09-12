@@ -11,6 +11,10 @@ public class Conexao {
 
     private static final String PASSWORD = "root";
 
+    private Conexao() {
+        throw new IllegalStateException("Connection class");
+      }
+
     public static Connection getConnection() throws Exception {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
