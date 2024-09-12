@@ -9,9 +9,9 @@ import java.util.List;
 
 public class ProcessaArquivosCliente {
 
-    private final String PATH = "importacao\\arquivos\\";
-    private final String PROCESSADOS = "importacao\\processados\\";
-    private final String CLIENTE_PREFIX = "Cliente_*";
+    private static final String PATH = "importacao\\arquivos\\";
+    private static final String PROCESSADOS = "importacao\\processados\\";
+    private static final String CLIENTE_PREFIX = "Cliente_*";
 
     public void processaCliente() throws Exception {
         List<Path> clientesAProcessar = getClientesAProcessar(); 
