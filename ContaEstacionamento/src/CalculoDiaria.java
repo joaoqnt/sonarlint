@@ -1,5 +1,3 @@
-import java.time.Duration;
-
 public class CalculoDiaria implements CalculoValor {
 
     public Double calcularValor(Duration duracao,Veiculo veiculo) {
