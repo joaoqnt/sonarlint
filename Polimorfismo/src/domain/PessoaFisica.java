@@ -15,9 +15,7 @@ public class PessoaFisica implements Validavel {
     }
 
     public boolean isPessoaRegular() {
-        boolean validaSerasa = true;
-
-        return validaSerasa;
+        return true;
     }
     
 }
