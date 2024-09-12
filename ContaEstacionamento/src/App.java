@@ -1,6 +1,3 @@
-import java.time.Duration;
-import java.time.LocalDateTime;
-
 public class App {
     public static void main(String[] args) throws Exception {
         LocalDateTime inicio = LocalDateTime.of(2024, 7, 1, 14, 30);
@@ -18,6 +15,5 @@ public class App {
         } else {
             conta.setCalculoValor(new CalculoMensalidade());
         }
-        System.out.println(conta.valorConta());
     }
 }
