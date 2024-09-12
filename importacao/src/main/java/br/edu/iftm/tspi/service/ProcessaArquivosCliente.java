@@ -1,5 +1,6 @@
 package br.edu.iftm.tspi.service;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -21,7 +22,7 @@ public class ProcessaArquivosCliente {
         }
     }
 
-    private List<Path> getClientesAProcessar() throws Exception {
+    private List<Path> getClientesAProcessar() throws IllegalArgumentException, IOException {
         Path dir = Paths.get(PATH);
 
         List<Path> fileList = new ArrayList<>();

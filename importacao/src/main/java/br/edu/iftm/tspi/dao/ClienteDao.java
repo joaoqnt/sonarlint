@@ -95,7 +95,7 @@ public class ClienteDao {
        if (rs.next()) {
           return rs.getInt(1);
        }
-       throw new Exception("Não encontrei o último lote de cliente");
+       throw new IllegalAccessError("Não encontrei o último lote de cliente");
     }
 
     public void salvarLote(Integer lote) throws Exception {
