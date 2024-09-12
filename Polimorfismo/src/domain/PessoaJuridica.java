@@ -2,11 +2,7 @@ package domain;
 
 public class PessoaJuridica implements Validavel {
 
-    private Integer codigo;
-
     private String nome;
-
-    private String cnpj;
 
     @Override
     public boolean valida() {
@@ -15,9 +11,8 @@ public class PessoaJuridica implements Validavel {
     }
 
     public boolean isPessoaRegular() {
-        boolean validouReceitaFederal = true;
 
-        return validouReceitaFederal;
+        return true;
     }
     
 }
