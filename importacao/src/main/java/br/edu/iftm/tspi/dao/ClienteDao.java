@@ -80,7 +80,7 @@ public class ClienteDao {
         } else if (cliente.getInclusaoAlteracao().equals("A")) {
             atualizarCliente(cliente);
         } else {
-            throw new Exception("desconheço essa opção de inclusão alteração:"
+            throw new IllegalAccessException("desconheço essa opção de inclusão alteração:"
                                 +cliente.getInclusaoAlteracao());
         }
     }

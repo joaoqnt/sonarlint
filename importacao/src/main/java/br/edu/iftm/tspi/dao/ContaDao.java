@@ -64,7 +64,7 @@ public class ContaDao {
         } else if (conta.getInclusaoAlteracao().equals("A")) {
             atualizarConta(conta);
         } else {
-            throw new Exception("desconheço essa opção de inclusão alteração:"
+            throw new IllegalAccessException("desconheço essa opção de inclusão alteração:"
                                 +conta.getInclusaoAlteracao());
         }
     }
@@ -79,7 +79,7 @@ public class ContaDao {
        if (rs.next()) {
           return rs.getInt(1);
        }
-       throw new Exception("Não encontrei o último lote de conta");
+       throw new IllegalAccessException("Não encontrei o último lote de conta");
     }
 
     public void salvarLote(Integer lote) throws Exception {
